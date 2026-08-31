@@ -6,15 +6,6 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v10.0": {
-      "Sw_biblioteca/1.0.0": {
-        "dependencies": {
-          "FontAwesome.Sharp": "6.6.0",
-          "Microsoft.Data.SqlClient": "7.0.2"
-        },
-        "runtime": {
-          "Sw_biblioteca.dll": {}
-        }
-      },
       "FontAwesome.Sharp/6.6.0": {
         "runtime": {
           "lib/net8.0-windows7.0/FontAwesome.Sharp.dll": {
@@ -295,11 +286,6 @@
     }
   },
   "libraries": {
-    "Sw_biblioteca/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "FontAwesome.Sharp/6.6.0": {
       "type": "package",
       "serviceable": true,

@@ -1,6 +1,6 @@
 ﻿namespace Sw_biblioteca
 {
-    partial class FormGeneros
+    partial class FormEditoriales
     {
         /// <summary>
         /// Required designer variable.

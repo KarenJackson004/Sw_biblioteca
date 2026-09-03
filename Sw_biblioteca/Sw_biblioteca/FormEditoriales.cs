@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Sw_biblioteca
 {
-    public partial class FormGeneros : Form
+    public partial class FormEditoriales : Form
     {
-        public FormGeneros()
+        public FormEditoriales()
         {
             InitializeComponent();
         }

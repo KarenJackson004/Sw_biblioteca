@@ -35,7 +35,7 @@
             BTNPrestamos = new Button();
             BTNLibros = new Button();
             BTNDevoluciones = new Button();
-            BTNGeneros = new Button();
+            BTNEditoriales = new Button();
             BTNAutores = new Button();
             BTNUsuario = new Button();
             PNLLogo = new Panel();
@@ -57,7 +57,7 @@
             PNLMenu.Controls.Add(BTNPrestamos);
             PNLMenu.Controls.Add(BTNLibros);
             PNLMenu.Controls.Add(BTNDevoluciones);
-            PNLMenu.Controls.Add(BTNGeneros);
+            PNLMenu.Controls.Add(BTNEditoriales);
             PNLMenu.Controls.Add(BTNAutores);
             PNLMenu.Controls.Add(BTNUsuario);
             PNLMenu.Controls.Add(PNLLogo);
@@ -160,24 +160,24 @@
             BTNDevoluciones.UseVisualStyleBackColor = false;
             BTNDevoluciones.Click += BTNDevoluciones_Click;
             // 
-            // BTNGeneros
+            // BTNEditoriales
             // 
-            BTNGeneros.BackColor = Color.YellowGreen;
-            BTNGeneros.FlatAppearance.BorderSize = 0;
-            BTNGeneros.FlatStyle = FlatStyle.Flat;
-            BTNGeneros.Font = new Font("Gill Sans MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BTNGeneros.ForeColor = Color.Black;
-            BTNGeneros.Image = (Image)resources.GetObject("BTNGeneros.Image");
-            BTNGeneros.ImageAlign = ContentAlignment.MiddleRight;
-            BTNGeneros.Location = new Point(-2, 390);
-            BTNGeneros.Margin = new Padding(2);
-            BTNGeneros.Name = "BTNGeneros";
-            BTNGeneros.Size = new Size(294, 49);
-            BTNGeneros.TabIndex = 5;
-            BTNGeneros.Text = "Generos";
-            BTNGeneros.TextImageRelation = TextImageRelation.ImageBeforeText;
-            BTNGeneros.UseVisualStyleBackColor = false;
-            BTNGeneros.Click += BTNGeneros_Click;
+            BTNEditoriales.BackColor = Color.YellowGreen;
+            BTNEditoriales.FlatAppearance.BorderSize = 0;
+            BTNEditoriales.FlatStyle = FlatStyle.Flat;
+            BTNEditoriales.Font = new Font("Gill Sans MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BTNEditoriales.ForeColor = Color.Black;
+            BTNEditoriales.Image = (Image)resources.GetObject("BTNEditoriales.Image");
+            BTNEditoriales.ImageAlign = ContentAlignment.MiddleRight;
+            BTNEditoriales.Location = new Point(-2, 390);
+            BTNEditoriales.Margin = new Padding(2);
+            BTNEditoriales.Name = "BTNEditoriales";
+            BTNEditoriales.Size = new Size(294, 49);
+            BTNEditoriales.TabIndex = 5;
+            BTNEditoriales.Text = "Editoriales";
+            BTNEditoriales.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BTNEditoriales.UseVisualStyleBackColor = false;
+            BTNEditoriales.Click += BTNGeneros_Click;
             // 
             // BTNAutores
             // 
@@ -336,7 +336,7 @@
         private PictureBox PNGLogo;
         private Button BTNUsuario;
         private Button BTNAutores;
-        private Button BTNGeneros;
+        private Button BTNEditoriales;
         private Button BTNDevoluciones;
         private Panel PNLContenido;
         private Button BTNLibros;

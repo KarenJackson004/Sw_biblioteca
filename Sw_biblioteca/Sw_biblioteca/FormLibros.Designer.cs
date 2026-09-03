@@ -30,7 +30,7 @@
         {
             PNLBusqueda = new Panel();
             BTNBusqueda = new Button();
-            TXTBOXBusquedaISBN = new TextBox();
+            TXTBuscarISBN = new TextBox();
             LBLIsbn = new Label();
             PNLGestor = new Panel();
             LBLGestor = new Label();
@@ -67,7 +67,7 @@
             // 
             PNLBusqueda.BackColor = Color.PaleGoldenrod;
             PNLBusqueda.Controls.Add(BTNBusqueda);
-            PNLBusqueda.Controls.Add(TXTBOXBusquedaISBN);
+            PNLBusqueda.Controls.Add(TXTBuscarISBN);
             PNLBusqueda.Controls.Add(LBLIsbn);
             PNLBusqueda.Dock = DockStyle.Top;
             PNLBusqueda.Location = new Point(0, 79);
@@ -85,13 +85,14 @@
             BTNBusqueda.TabIndex = 2;
             BTNBusqueda.Text = "Buscar";
             BTNBusqueda.UseVisualStyleBackColor = false;
+            BTNBusqueda.Click += BTNBusqueda_Click;
             // 
-            // TXTBOXBusquedaISBN
+            // TXTBuscarISBN
             // 
-            TXTBOXBusquedaISBN.Location = new Point(426, 29);
-            TXTBOXBusquedaISBN.Name = "TXTBOXBusquedaISBN";
-            TXTBOXBusquedaISBN.Size = new Size(282, 27);
-            TXTBOXBusquedaISBN.TabIndex = 1;
+            TXTBuscarISBN.Location = new Point(426, 29);
+            TXTBuscarISBN.Name = "TXTBuscarISBN";
+            TXTBuscarISBN.Size = new Size(282, 27);
+            TXTBuscarISBN.TabIndex = 1;
             // 
             // LBLIsbn
             // 
@@ -178,6 +179,7 @@
             CMBEditorial.Name = "CMBEditorial";
             CMBEditorial.Size = new Size(285, 28);
             CMBEditorial.TabIndex = 10;
+            CMBEditorial.SelectedIndexChanged += CMBEditorial_SelectedIndexChanged;
             // 
             // CMBAutor
             // 
@@ -293,13 +295,14 @@
             BTNCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             BTNCancelar.IconColor = Color.Black;
             BTNCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            BTNCancelar.Location = new Point(549, 17);
+            BTNCancelar.Location = new Point(547, 17);
             BTNCancelar.Name = "BTNCancelar";
             BTNCancelar.Size = new Size(101, 40);
             BTNCancelar.TabIndex = 4;
             BTNCancelar.Text = "Cancelar";
             BTNCancelar.UseMnemonic = false;
             BTNCancelar.UseVisualStyleBackColor = false;
+            BTNCancelar.Click += BTNCancelar_Click;
             // 
             // BTNEliminar
             // 
@@ -328,6 +331,7 @@
             BTNEditar.TabIndex = 2;
             BTNEditar.Text = "Editar";
             BTNEditar.UseVisualStyleBackColor = false;
+            BTNEditar.Click += BTNEditar_Click;
             // 
             // BTNGuardar
             // 
@@ -342,6 +346,7 @@
             BTNGuardar.TabIndex = 1;
             BTNGuardar.Text = "Guardar";
             BTNGuardar.UseVisualStyleBackColor = false;
+            BTNGuardar.Click += BTNGuardar_Click;
             // 
             // BTNNuevo
             // 
@@ -356,15 +361,17 @@
             BTNNuevo.TabIndex = 0;
             BTNNuevo.Text = "Nuevo";
             BTNNuevo.UseVisualStyleBackColor = false;
+            BTNNuevo.Click += BTNNuevo_Click;
             // 
             // dgvLibros
             // 
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibros.Location = new Point(28, 545);
+            dgvLibros.Location = new Point(41, 551);
             dgvLibros.Name = "dgvLibros";
             dgvLibros.RowHeadersWidth = 51;
-            dgvLibros.Size = new Size(1130, 320);
+            dgvLibros.Size = new Size(1130, 269);
             dgvLibros.TabIndex = 6;
+            dgvLibros.CellContentDoubleClick += CargarLibroSeleccionado;
             // 
             // FormLibros
             // 
@@ -394,7 +401,7 @@
 
         private Panel PNLBusqueda;
         private Button BTNBusqueda;
-        private TextBox TXTBOXBusquedaISBN;
+        private TextBox TXTBuscarISBN;
         private Label LBLIsbn;
         private Panel PNLGestor;
         private Label LBLGestor;

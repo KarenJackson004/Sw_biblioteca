@@ -45,7 +45,7 @@ namespace Sw_biblioteca
 
         private void BTNGeneros_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(new FormGeneros());
+            AbrirFormulario(new FormEditoriales());
         }
 
         private void BTNPrestamos_Click_1(object sender, EventArgs e)

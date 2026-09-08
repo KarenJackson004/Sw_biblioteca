@@ -72,7 +72,7 @@
             PNLBusqueda.Dock = DockStyle.Top;
             PNLBusqueda.Location = new Point(0, 79);
             PNLBusqueda.Name = "PNLBusqueda";
-            PNLBusqueda.Size = new Size(1183, 80);
+            PNLBusqueda.Size = new Size(1348, 80);
             PNLBusqueda.TabIndex = 3;
             // 
             // BTNBusqueda
@@ -111,7 +111,7 @@
             PNLGestor.Dock = DockStyle.Top;
             PNLGestor.Location = new Point(0, 0);
             PNLGestor.Name = "PNLGestor";
-            PNLGestor.Size = new Size(1183, 79);
+            PNLGestor.Size = new Size(1348, 79);
             PNLGestor.TabIndex = 2;
             PNLGestor.Paint += PNLGestor_Paint;
             // 
@@ -121,12 +121,13 @@
             LBLGestor.BackColor = Color.Transparent;
             LBLGestor.Font = new Font("Gill Sans MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLGestor.ForeColor = SystemColors.ButtonFace;
-            LBLGestor.Location = new Point(365, 9);
+            LBLGestor.Location = new Point(426, 9);
             LBLGestor.Name = "LBLGestor";
-            LBLGestor.Size = new Size(301, 52);
+            LBLGestor.Size = new Size(394, 52);
             LBLGestor.TabIndex = 0;
-            LBLGestor.Text = "Gestor de libros";
+            LBLGestor.Text = "GESTOR DE LIBROS";
             LBLGestor.TextAlign = ContentAlignment.MiddleCenter;
+            LBLGestor.Click += LBLGestor_Click;
             // 
             // PNLDatos
             // 
@@ -148,7 +149,7 @@
             PNLDatos.Dock = DockStyle.Top;
             PNLDatos.Location = new Point(0, 159);
             PNLDatos.Name = "PNLDatos";
-            PNLDatos.Size = new Size(1183, 272);
+            PNLDatos.Size = new Size(1348, 272);
             PNLDatos.TabIndex = 4;
             // 
             // TXTBOXExistencias
@@ -365,9 +366,11 @@
             // 
             // dgvLibros
             // 
+            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvLibros.Location = new Point(41, 551);
             dgvLibros.Name = "dgvLibros";
+            dgvLibros.ReadOnly = true;
             dgvLibros.RowHeadersWidth = 51;
             dgvLibros.Size = new Size(1130, 269);
             dgvLibros.TabIndex = 6;
@@ -377,13 +380,14 @@
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1183, 703);
+            ClientSize = new Size(1348, 959);
             Controls.Add(dgvLibros);
             Controls.Add(panel1);
             Controls.Add(PNLDatos);
             Controls.Add(PNLBusqueda);
             Controls.Add(PNLGestor);
             Name = "FormLibros";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLibros";
             WindowState = FormWindowState.Maximized;
             PNLBusqueda.ResumeLayout(false);

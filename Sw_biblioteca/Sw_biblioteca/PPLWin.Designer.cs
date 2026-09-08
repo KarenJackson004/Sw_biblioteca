@@ -64,7 +64,7 @@
             PNLMenu.Dock = DockStyle.Left;
             PNLMenu.Location = new Point(0, 0);
             PNLMenu.Name = "PNLMenu";
-            PNLMenu.Size = new Size(285, 620);
+            PNLMenu.Size = new Size(285, 959);
             PNLMenu.TabIndex = 0;
             // 
             // BTNExit
@@ -74,7 +74,7 @@
             BTNExit.FlatAppearance.BorderSize = 0;
             BTNExit.FlatStyle = FlatStyle.Flat;
             BTNExit.Image = (Image)resources.GetObject("BTNExit.Image");
-            BTNExit.Location = new Point(111, 546);
+            BTNExit.Location = new Point(109, 579);
             BTNExit.Name = "BTNExit";
             BTNExit.Size = new Size(56, 65);
             BTNExit.TabIndex = 12;
@@ -257,16 +257,16 @@
             PNLSuperior.Dock = DockStyle.Top;
             PNLSuperior.Location = new Point(285, 0);
             PNLSuperior.Name = "PNLSuperior";
-            PNLSuperior.Size = new Size(996, 125);
+            PNLSuperior.Size = new Size(1063, 125);
             PNLSuperior.TabIndex = 1;
             // 
             // PNLEstado
             // 
             PNLEstado.BackColor = Color.DarkKhaki;
             PNLEstado.Dock = DockStyle.Bottom;
-            PNLEstado.Location = new Point(285, 570);
+            PNLEstado.Location = new Point(285, 909);
             PNLEstado.Name = "PNLEstado";
-            PNLEstado.Size = new Size(996, 50);
+            PNLEstado.Size = new Size(1063, 50);
             PNLEstado.TabIndex = 2;
             // 
             // PNLContenido
@@ -276,7 +276,7 @@
             PNLContenido.Dock = DockStyle.Fill;
             PNLContenido.Location = new Point(285, 125);
             PNLContenido.Name = "PNLContenido";
-            PNLContenido.Size = new Size(996, 445);
+            PNLContenido.Size = new Size(1063, 784);
             PNLContenido.TabIndex = 3;
             PNLContenido.Paint += PNLContenido_Paint;
             // 
@@ -284,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1281, 620);
+            ClientSize = new Size(1348, 959);
             Controls.Add(PNLContenido);
             Controls.Add(PNLEstado);
             Controls.Add(PNLSuperior);

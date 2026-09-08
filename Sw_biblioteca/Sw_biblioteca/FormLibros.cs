@@ -348,6 +348,8 @@ namespace Sw_biblioteca
             }
         }
 
+
+
         private void BTNEditar_Click(object sender, EventArgs e)
         {
             try
@@ -454,6 +456,11 @@ namespace Sw_biblioteca
             CMBEditorial.SelectedIndex = -1;
 
             modoEdicion = false;
+        }
+
+        private void LBLGestor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 } 

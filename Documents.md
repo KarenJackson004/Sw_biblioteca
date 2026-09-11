@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ACA -- Programación Avanzada
 
 # Sistema de Gestión de Biblioteca
@@ -35,20 +35,16 @@ Avanzada**, aplicando Programación Orientada a Objetos, base de datos
 relacional, arquitectura por capas, operaciones CRUD, validaciones,
 manejo de excepciones y conexión con SQL Server.
 
-**Estudiante(s):** \[Karen Natalia Casas Cardozo\]\
-**Programa:** \[Ingeniería de sistemas\]\
-**Grupo:** \[53304\]\
-**Docente:** \[Veronica Castro Manur\]\
-**Institución:** \[Corporacion Unificada Nacional de educación superior\]\
-**Año:** \[2026\]
+**Estudiante(s):** Karen Natalia Casas Cardozo\
+**Programa:** Ingeniería de sistemas\
+**Grupo:** 53304\
+**Docente:** Veronica Castro Manur\
+**Institución:** Corporacion Unificada Nacional de educación superior\
+**Año:** 2026
 
 ------------------------------------------------------------------------
 
 # TABLA DE CONTENIDO
-
-> **Nota:** Actualizar esta sección al finalizar el documento, de
-> acuerdo con la numeración real de las páginas.
-
 1.  Introducción
 2.  Objetivos
     -   2.1 Objetivo general
@@ -75,8 +71,8 @@ Esta documentación corresponde al desarrollo de un proyecto de programación pa
 
 En este programa buscamos una manipulación de los datos e informacion consistente, como lo son; registro de usuarios, gestion de libros, prestamos, editoriales, etc.
 
-El sistema fue desarrollado utilizando **\[C# / .NET / Windows Forms /
-SQL Server / otras tecnologías utilizadas\]**, aplicando principios de
+El sistema fue desarrollado utilizando C# / .NET / Windows Forms /
+SQL Server / otras tecnologías utilizadas, aplicando principios de
 Programación Orientada a Objetos y una arquitectura por capas.
 
 ------------------------------------------------------------------------
@@ -137,7 +133,6 @@ El sistema permitirá:
 -   Registrar devoluciones.
 -   Consultar disponibilidad.
 -   Consultar historial de préstamos.
--   \[Agregar otras funcionalidades implementadas\].
 
 ------------------------------------------------------------------------
 
@@ -146,14 +141,14 @@ El sistema permitirá:
 ## 4.1 Descripción general
 
 El Sistema de Gestión de Biblioteca permitirá administrar la información
-relacionada con \[entidades principales\] y controlar los procesos de
-\[préstamos, devoluciones, consultas, etc.\].
+relacionada con entidades principales y controlar los procesos de
+préstamos, devoluciones, consultas, etc.
 
 ## 4.2 Actores del sistema
 
   Actor                               Descripción
   ----------------------------------- -----------------------------------
-  Bibliotecario / Administrador       \[Manipular la información de usuarios, libros, prestamos, autores, editoriales y reportes en base a los requerimientos que se esten necesitando y organizando\]
+  Bibliotecario / Administrador:       Manipular la información de usuarios, libros, prestamos, autores, editoriales y reportes en base a los requerimientos que se esten necesitando y organizando
   -----------------------------------------------------------------------
 
 ## 4.3 Requerimientos funcionales
@@ -191,9 +186,6 @@ relacionada con \[entidades principales\] y controlar los procesos de
                                                   prestados, historial y
                                                   usuarios con préstamos
                                                   activos.
-
-  RF08                    \[Otro requerimiento\]  \[Descripción.\]
-  -----------------------------------------------------------------------
 
 ## 4.4 Requerimientos no funcionales
 
@@ -526,7 +518,7 @@ Es la capa mediante la cual el usuario interactúa con el sistema.
 
 -   C#
 -   Windows Forms
--   \[.NET Molder Builder 2022\]
+-   .NET Molder Builder 2022
 
 ## 9.4 Capa de Lógica de Negocio
 
@@ -537,12 +529,12 @@ de negocio y coordina las operaciones.
 
 **Componentes:**
 
--   \[LibroController\]
--   \[AutorController\]
--   \[CategoriaController\]
--   \[UsuarioController\]
--   \[PrestamoController\]
--   \[DevolucionController\]
+-   LibroController
+-   AutorController
+-   CategoriaController
+-   UsuarioController
+-   PrestamoController
+-   DevolucionController
 
 **Ejemplos de reglas:**
 
@@ -561,13 +553,13 @@ Gestiona la comunicación entre la aplicación y SQL Server.
 
 **Componentes:**
 
--   \[Conexion\]
--   \[LibroDAO\]
--   \[AutorDAO\]
--   \[CategoriaDAO\]
--   \[UsuarioDAO\]
--   \[PrestamoDAO\]
--   \[DevolucionDAO\]
+-   Conexion
+-   LibroDAO
+-   AutorDAO
+-   CategoriaDAO
+-   UsuarioDAO
+-   PrestamoDAO
+-   DevolucionDAO
 
 **Tecnologías utilizadas:**
 
@@ -617,8 +609,6 @@ llegar nuevamente a la interfaz.
 **Objetivo:** Este modulo se diseño con el fin de que el usuario pueda hacer las respectivas funcionalidades con su inventario de libros
 **Funcionalidades:** - Registrar. - Consultar. - Actualizar. -
 Eliminar. - Buscar.
-
-**Validaciones:** - \[Validación.\] - \[Validación.\]
 
 ## 10.2 Módulo de autores
 

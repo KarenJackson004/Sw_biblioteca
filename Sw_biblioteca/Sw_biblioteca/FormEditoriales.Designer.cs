@@ -1,6 +1,6 @@
 ﻿namespace Sw_biblioteca
 {
-    partial class FormAutores
+    partial class FormEditoriales
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            PNLTitulo = new Panel();
-            LBLTitulo = new Label();
+            PNLLista = new Panel();
+            DGVEditoriales = new DataGridView();
             PNLDatos = new Panel();
             BTNCancelar = new FontAwesome.Sharp.IconButton();
             BTNEliminar = new FontAwesome.Sharp.IconButton();
             BTNEditar = new FontAwesome.Sharp.IconButton();
             BTNGuardar = new FontAwesome.Sharp.IconButton();
             BTNNuevo = new FontAwesome.Sharp.IconButton();
-            TXTBOXApellido = new TextBox();
             TXTBOXNombre = new TextBox();
-            LBLApellido = new Label();
             LBLNombre = new Label();
-            PNLLista = new Panel();
-            DGVAutores = new DataGridView();
-            PNLTitulo.SuspendLayout();
-            PNLDatos.SuspendLayout();
+            PNLTitulo = new Panel();
+            LBLTitulo = new Label();
             PNLLista.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)DGVAutores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DGVEditoriales).BeginInit();
+            PNLDatos.SuspendLayout();
+            PNLTitulo.SuspendLayout();
             SuspendLayout();
             // 
-            // PNLTitulo
+            // PNLLista
             // 
-            PNLTitulo.BackColor = Color.MediumSeaGreen;
-            PNLTitulo.Controls.Add(LBLTitulo);
-            PNLTitulo.Dock = DockStyle.Top;
-            PNLTitulo.Location = new Point(0, 0);
-            PNLTitulo.Name = "PNLTitulo";
-            PNLTitulo.Size = new Size(1348, 70);
-            PNLTitulo.TabIndex = 0;
+            PNLLista.BackColor = SystemColors.ButtonFace;
+            PNLLista.Controls.Add(DGVEditoriales);
+            PNLLista.Dock = DockStyle.Fill;
+            PNLLista.Location = new Point(0, 463);
+            PNLLista.Name = "PNLLista";
+            PNLLista.Size = new Size(1348, 496);
+            PNLLista.TabIndex = 5;
             // 
-            // LBLTitulo
+            // DGVEditoriales
             // 
-            LBLTitulo.AutoSize = true;
-            LBLTitulo.BackColor = Color.Transparent;
-            LBLTitulo.Font = new Font("Gill Sans MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LBLTitulo.ForeColor = SystemColors.ButtonFace;
-            LBLTitulo.Location = new Point(451, 9);
-            LBLTitulo.Name = "LBLTitulo";
-            LBLTitulo.Size = new Size(442, 52);
-            LBLTitulo.TabIndex = 1;
-            LBLTitulo.Text = "GESTOR DE AUTORES";
-            LBLTitulo.TextAlign = ContentAlignment.MiddleCenter;
+            DGVEditoriales.AllowUserToAddRows = false;
+            DGVEditoriales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            DGVEditoriales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DGVEditoriales.Dock = DockStyle.Fill;
+            DGVEditoriales.Location = new Point(0, 0);
+            DGVEditoriales.MultiSelect = false;
+            DGVEditoriales.Name = "DGVEditoriales";
+            DGVEditoriales.ReadOnly = true;
+            DGVEditoriales.RowHeadersWidth = 51;
+            DGVEditoriales.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            DGVEditoriales.Size = new Size(1348, 496);
+            DGVEditoriales.TabIndex = 0;
+            DGVEditoriales.CellDoubleClick += DGVEditoriales_CellDoubleClick;
             // 
             // PNLDatos
             // 
@@ -79,15 +80,13 @@
             PNLDatos.Controls.Add(BTNEditar);
             PNLDatos.Controls.Add(BTNGuardar);
             PNLDatos.Controls.Add(BTNNuevo);
-            PNLDatos.Controls.Add(TXTBOXApellido);
             PNLDatos.Controls.Add(TXTBOXNombre);
-            PNLDatos.Controls.Add(LBLApellido);
             PNLDatos.Controls.Add(LBLNombre);
             PNLDatos.Dock = DockStyle.Top;
             PNLDatos.Location = new Point(0, 70);
             PNLDatos.Name = "PNLDatos";
             PNLDatos.Size = new Size(1348, 393);
-            PNLDatos.TabIndex = 1;
+            PNLDatos.TabIndex = 4;
             // 
             // BTNCancelar
             // 
@@ -163,70 +162,49 @@
             BTNNuevo.TabIndex = 5;
             BTNNuevo.Text = "Nuevo";
             BTNNuevo.UseVisualStyleBackColor = false;
-            BTNNuevo.Click += BTNNuevo_Click;
-            // 
-            // TXTBOXApellido
-            // 
-            TXTBOXApellido.Location = new Point(575, 169);
-            TXTBOXApellido.Name = "TXTBOXApellido";
-            TXTBOXApellido.Size = new Size(230, 27);
-            TXTBOXApellido.TabIndex = 3;
+            BTNNuevo.Click += BTNNuevo_Click_1;
             // 
             // TXTBOXNombre
             // 
-            TXTBOXNombre.Location = new Point(575, 97);
+            TXTBOXNombre.Location = new Point(575, 133);
             TXTBOXNombre.Name = "TXTBOXNombre";
-            TXTBOXNombre.Size = new Size(230, 27);
+            TXTBOXNombre.Size = new Size(271, 27);
             TXTBOXNombre.TabIndex = 2;
-            // 
-            // LBLApellido
-            // 
-            LBLApellido.AutoSize = true;
-            LBLApellido.Font = new Font("Gill Sans MT", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LBLApellido.Location = new Point(350, 169);
-            LBLApellido.Name = "LBLApellido";
-            LBLApellido.Size = new Size(102, 29);
-            LBLApellido.TabIndex = 1;
-            LBLApellido.Text = "Apellido: ";
             // 
             // LBLNombre
             // 
             LBLNombre.AutoSize = true;
-            LBLNombre.Font = new Font("Gill Sans MT", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LBLNombre.Location = new Point(350, 95);
+            LBLNombre.Font = new Font("Gill Sans MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LBLNombre.Location = new Point(354, 133);
             LBLNombre.Name = "LBLNombre";
-            LBLNombre.Size = new Size(98, 29);
+            LBLNombre.Size = new Size(112, 33);
             LBLNombre.TabIndex = 0;
             LBLNombre.Text = "Nombre:";
-            LBLNombre.Click += label1_Click;
             // 
-            // PNLLista
+            // PNLTitulo
             // 
-            PNLLista.BackColor = SystemColors.ButtonFace;
-            PNLLista.Controls.Add(DGVAutores);
-            PNLLista.Dock = DockStyle.Fill;
-            PNLLista.Location = new Point(0, 463);
-            PNLLista.Name = "PNLLista";
-            PNLLista.Size = new Size(1348, 496);
-            PNLLista.TabIndex = 2;
+            PNLTitulo.BackColor = Color.MediumSeaGreen;
+            PNLTitulo.Controls.Add(LBLTitulo);
+            PNLTitulo.Dock = DockStyle.Top;
+            PNLTitulo.Location = new Point(0, 0);
+            PNLTitulo.Name = "PNLTitulo";
+            PNLTitulo.Size = new Size(1348, 70);
+            PNLTitulo.TabIndex = 3;
             // 
-            // DGVAutores
+            // LBLTitulo
             // 
-            DGVAutores.AllowUserToAddRows = false;
-            DGVAutores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            DGVAutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DGVAutores.Dock = DockStyle.Fill;
-            DGVAutores.Location = new Point(0, 0);
-            DGVAutores.MultiSelect = false;
-            DGVAutores.Name = "DGVAutores";
-            DGVAutores.ReadOnly = true;
-            DGVAutores.RowHeadersWidth = 51;
-            DGVAutores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            DGVAutores.Size = new Size(1348, 496);
-            DGVAutores.TabIndex = 0;
-            DGVAutores.CellDoubleClick += DGVAutores_CellDoubleClick;
+            LBLTitulo.AutoSize = true;
+            LBLTitulo.BackColor = Color.Transparent;
+            LBLTitulo.Font = new Font("Gill Sans MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            LBLTitulo.ForeColor = SystemColors.ButtonFace;
+            LBLTitulo.Location = new Point(451, 9);
+            LBLTitulo.Name = "LBLTitulo";
+            LBLTitulo.Size = new Size(512, 52);
+            LBLTitulo.TabIndex = 1;
+            LBLTitulo.Text = "GESTOR DE EDITORIALES";
+            LBLTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // FormAutores
+            // FormEditoriales
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -234,34 +212,32 @@
             Controls.Add(PNLLista);
             Controls.Add(PNLDatos);
             Controls.Add(PNLTitulo);
-            Name = "FormAutores";
+            Name = "FormEditoriales";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormAutores";
+            Text = "FormGeneros";
             WindowState = FormWindowState.Maximized;
-            PNLTitulo.ResumeLayout(false);
-            PNLTitulo.PerformLayout();
+            PNLLista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)DGVEditoriales).EndInit();
             PNLDatos.ResumeLayout(false);
             PNLDatos.PerformLayout();
-            PNLLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)DGVAutores).EndInit();
+            PNLTitulo.ResumeLayout(false);
+            PNLTitulo.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel PNLTitulo;
-        private Panel PNLDatos;
         private Panel PNLLista;
-        private Label LBLTitulo;
-        private Label LBLNombre;
-        private TextBox TXTBOXApellido;
-        private TextBox TXTBOXNombre;
-        private Label LBLApellido;
+        private DataGridView DGVEditoriales;
+        private Panel PNLDatos;
         private FontAwesome.Sharp.IconButton BTNCancelar;
         private FontAwesome.Sharp.IconButton BTNEliminar;
         private FontAwesome.Sharp.IconButton BTNEditar;
         private FontAwesome.Sharp.IconButton BTNGuardar;
         private FontAwesome.Sharp.IconButton BTNNuevo;
-        private DataGridView DGVAutores;
+        private TextBox TXTBOXNombre;
+        private Label LBLNombre;
+        private Panel PNLTitulo;
+        private Label LBLTitulo;
     }
 }

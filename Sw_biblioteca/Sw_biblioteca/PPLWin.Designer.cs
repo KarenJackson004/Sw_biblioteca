@@ -35,7 +35,7 @@
             BTNPrestamos = new Button();
             BTNLibros = new Button();
             BTNDevoluciones = new Button();
-            BTNGeneros = new Button();
+            BTNEditoriales = new Button();
             BTNAutores = new Button();
             BTNUsuario = new Button();
             PNLLogo = new Panel();
@@ -57,14 +57,14 @@
             PNLMenu.Controls.Add(BTNPrestamos);
             PNLMenu.Controls.Add(BTNLibros);
             PNLMenu.Controls.Add(BTNDevoluciones);
-            PNLMenu.Controls.Add(BTNGeneros);
+            PNLMenu.Controls.Add(BTNEditoriales);
             PNLMenu.Controls.Add(BTNAutores);
             PNLMenu.Controls.Add(BTNUsuario);
             PNLMenu.Controls.Add(PNLLogo);
             PNLMenu.Dock = DockStyle.Left;
             PNLMenu.Location = new Point(0, 0);
             PNLMenu.Name = "PNLMenu";
-            PNLMenu.Size = new Size(285, 620);
+            PNLMenu.Size = new Size(285, 959);
             PNLMenu.TabIndex = 0;
             // 
             // BTNExit
@@ -74,7 +74,7 @@
             BTNExit.FlatAppearance.BorderSize = 0;
             BTNExit.FlatStyle = FlatStyle.Flat;
             BTNExit.Image = (Image)resources.GetObject("BTNExit.Image");
-            BTNExit.Location = new Point(111, 546);
+            BTNExit.Location = new Point(109, 579);
             BTNExit.Name = "BTNExit";
             BTNExit.Size = new Size(56, 65);
             BTNExit.TabIndex = 12;
@@ -160,24 +160,24 @@
             BTNDevoluciones.UseVisualStyleBackColor = false;
             BTNDevoluciones.Click += BTNDevoluciones_Click;
             // 
-            // BTNGeneros
+            // BTNEditoriales
             // 
-            BTNGeneros.BackColor = Color.YellowGreen;
-            BTNGeneros.FlatAppearance.BorderSize = 0;
-            BTNGeneros.FlatStyle = FlatStyle.Flat;
-            BTNGeneros.Font = new Font("Gill Sans MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            BTNGeneros.ForeColor = Color.Black;
-            BTNGeneros.Image = (Image)resources.GetObject("BTNGeneros.Image");
-            BTNGeneros.ImageAlign = ContentAlignment.MiddleRight;
-            BTNGeneros.Location = new Point(-2, 390);
-            BTNGeneros.Margin = new Padding(2);
-            BTNGeneros.Name = "BTNGeneros";
-            BTNGeneros.Size = new Size(294, 49);
-            BTNGeneros.TabIndex = 5;
-            BTNGeneros.Text = "Generos";
-            BTNGeneros.TextImageRelation = TextImageRelation.ImageBeforeText;
-            BTNGeneros.UseVisualStyleBackColor = false;
-            BTNGeneros.Click += BTNGeneros_Click;
+            BTNEditoriales.BackColor = Color.YellowGreen;
+            BTNEditoriales.FlatAppearance.BorderSize = 0;
+            BTNEditoriales.FlatStyle = FlatStyle.Flat;
+            BTNEditoriales.Font = new Font("Gill Sans MT", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            BTNEditoriales.ForeColor = Color.Black;
+            BTNEditoriales.Image = (Image)resources.GetObject("BTNEditoriales.Image");
+            BTNEditoriales.ImageAlign = ContentAlignment.MiddleRight;
+            BTNEditoriales.Location = new Point(-2, 390);
+            BTNEditoriales.Margin = new Padding(2);
+            BTNEditoriales.Name = "BTNEditoriales";
+            BTNEditoriales.Size = new Size(294, 49);
+            BTNEditoriales.TabIndex = 5;
+            BTNEditoriales.Text = "Editoriales";
+            BTNEditoriales.TextImageRelation = TextImageRelation.ImageBeforeText;
+            BTNEditoriales.UseVisualStyleBackColor = false;
+            BTNEditoriales.Click += BTNGeneros_Click;
             // 
             // BTNAutores
             // 
@@ -257,16 +257,16 @@
             PNLSuperior.Dock = DockStyle.Top;
             PNLSuperior.Location = new Point(285, 0);
             PNLSuperior.Name = "PNLSuperior";
-            PNLSuperior.Size = new Size(996, 125);
+            PNLSuperior.Size = new Size(1063, 125);
             PNLSuperior.TabIndex = 1;
             // 
             // PNLEstado
             // 
             PNLEstado.BackColor = Color.DarkKhaki;
             PNLEstado.Dock = DockStyle.Bottom;
-            PNLEstado.Location = new Point(285, 570);
+            PNLEstado.Location = new Point(285, 909);
             PNLEstado.Name = "PNLEstado";
-            PNLEstado.Size = new Size(996, 50);
+            PNLEstado.Size = new Size(1063, 50);
             PNLEstado.TabIndex = 2;
             // 
             // PNLContenido
@@ -276,7 +276,7 @@
             PNLContenido.Dock = DockStyle.Fill;
             PNLContenido.Location = new Point(285, 125);
             PNLContenido.Name = "PNLContenido";
-            PNLContenido.Size = new Size(996, 445);
+            PNLContenido.Size = new Size(1063, 784);
             PNLContenido.TabIndex = 3;
             PNLContenido.Paint += PNLContenido_Paint;
             // 
@@ -284,7 +284,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1281, 620);
+            ClientSize = new Size(1348, 959);
             Controls.Add(PNLContenido);
             Controls.Add(PNLEstado);
             Controls.Add(PNLSuperior);
@@ -336,7 +336,7 @@
         private PictureBox PNGLogo;
         private Button BTNUsuario;
         private Button BTNAutores;
-        private Button BTNGeneros;
+        private Button BTNEditoriales;
         private Button BTNDevoluciones;
         private Panel PNLContenido;
         private Button BTNLibros;

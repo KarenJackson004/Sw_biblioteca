@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ACA -- Programación Avanzada
 
 # Sistema de Gestión de Biblioteca
@@ -830,29 +831,29 @@ Insertar capturas que evidencien:
 
 # LISTA DE VERIFICACIÓN ANTES DE ENTREGAR
 
--   [*] Portada.
--   [*] Contraportada.
--   [*] Introducción.
--   [*] Objetivos.
--   [*] Tabla de contenido.
--   [*] Numeración de páginas.
--   [*] Planteamiento del problema.
--   [*] Análisis de requerimientos.
--   [*] Casos de uso.
--   [*] Diagrama de casos de uso.
--   [*] Diagrama de clases.
--   [*] Modelo entidad-relación.
--   [*] Diccionario de datos.
--   [*] Arquitectura del sistema.
--   [*] Explicación de cada módulo.
--   [*] Capturas de pantalla.
--   [*] Pruebas de funcionamiento.
--   [*] Conclusiones.
--   [*] Recomendaciones.
--   [*] Referencias bibliográficas en formato APA.
--   [*] Código fuente completo.
--   [*] Script SQL.
--   [*] Datos de prueba.
--   [*] Repositorio GitHub.
--   [*] README.md.
--   [*] Evidencia de commits.
+-   [x] Portada.
+-   [x] Contraportada.
+-   [x] Introducción.
+-   [x] Objetivos.
+-   [x] Tabla de contenido.
+-   [x] Numeración de páginas.
+-   [x] Planteamiento del problema.
+-   [x] Análisis de requerimientos.
+-   [x] Casos de uso.
+-   [x] Diagrama de casos de uso.
+-   [x] Diagrama de clases.
+-   [x] Modelo entidad-relación.
+-   [x] Diccionario de datos.
+-   [x] Arquitectura del sistema.
+-   [x] Explicación de cada módulo.
+-   [x] Capturas de pantalla.
+-   [x] Pruebas de funcionamiento.
+-   [x] Conclusiones.
+-   [x] Recomendaciones.
+-   [x] Referencias bibliográficas en formato APA.
+-   [x] Código fuente completo.
+-   [x] Script SQL.
+-   [x] Datos de prueba.
+-   [x] Repositorio GitHub.
+-   [x] README.md.
+-   [x] Evidencia de commits.

@@ -30,7 +30,7 @@
         {
             PNLBusqueda = new Panel();
             BTNBusqueda = new Button();
-            TXTBOXBusquedaISBN = new TextBox();
+            TXTBuscarISBN = new TextBox();
             LBLIsbn = new Label();
             PNLGestor = new Panel();
             LBLGestor = new Label();
@@ -67,12 +67,12 @@
             // 
             PNLBusqueda.BackColor = Color.PaleGoldenrod;
             PNLBusqueda.Controls.Add(BTNBusqueda);
-            PNLBusqueda.Controls.Add(TXTBOXBusquedaISBN);
+            PNLBusqueda.Controls.Add(TXTBuscarISBN);
             PNLBusqueda.Controls.Add(LBLIsbn);
             PNLBusqueda.Dock = DockStyle.Top;
             PNLBusqueda.Location = new Point(0, 79);
             PNLBusqueda.Name = "PNLBusqueda";
-            PNLBusqueda.Size = new Size(1183, 80);
+            PNLBusqueda.Size = new Size(1348, 80);
             PNLBusqueda.TabIndex = 3;
             // 
             // BTNBusqueda
@@ -85,13 +85,14 @@
             BTNBusqueda.TabIndex = 2;
             BTNBusqueda.Text = "Buscar";
             BTNBusqueda.UseVisualStyleBackColor = false;
+            BTNBusqueda.Click += BTNBusqueda_Click;
             // 
-            // TXTBOXBusquedaISBN
+            // TXTBuscarISBN
             // 
-            TXTBOXBusquedaISBN.Location = new Point(426, 29);
-            TXTBOXBusquedaISBN.Name = "TXTBOXBusquedaISBN";
-            TXTBOXBusquedaISBN.Size = new Size(282, 27);
-            TXTBOXBusquedaISBN.TabIndex = 1;
+            TXTBuscarISBN.Location = new Point(426, 29);
+            TXTBuscarISBN.Name = "TXTBuscarISBN";
+            TXTBuscarISBN.Size = new Size(282, 27);
+            TXTBuscarISBN.TabIndex = 1;
             // 
             // LBLIsbn
             // 
@@ -110,7 +111,7 @@
             PNLGestor.Dock = DockStyle.Top;
             PNLGestor.Location = new Point(0, 0);
             PNLGestor.Name = "PNLGestor";
-            PNLGestor.Size = new Size(1183, 79);
+            PNLGestor.Size = new Size(1348, 79);
             PNLGestor.TabIndex = 2;
             PNLGestor.Paint += PNLGestor_Paint;
             // 
@@ -120,12 +121,13 @@
             LBLGestor.BackColor = Color.Transparent;
             LBLGestor.Font = new Font("Gill Sans MT", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LBLGestor.ForeColor = SystemColors.ButtonFace;
-            LBLGestor.Location = new Point(365, 9);
+            LBLGestor.Location = new Point(426, 9);
             LBLGestor.Name = "LBLGestor";
-            LBLGestor.Size = new Size(301, 52);
+            LBLGestor.Size = new Size(394, 52);
             LBLGestor.TabIndex = 0;
-            LBLGestor.Text = "Gestor de libros";
+            LBLGestor.Text = "GESTOR DE LIBROS";
             LBLGestor.TextAlign = ContentAlignment.MiddleCenter;
+            LBLGestor.Click += LBLGestor_Click;
             // 
             // PNLDatos
             // 
@@ -147,7 +149,7 @@
             PNLDatos.Dock = DockStyle.Top;
             PNLDatos.Location = new Point(0, 159);
             PNLDatos.Name = "PNLDatos";
-            PNLDatos.Size = new Size(1183, 272);
+            PNLDatos.Size = new Size(1348, 272);
             PNLDatos.TabIndex = 4;
             // 
             // TXTBOXExistencias
@@ -178,6 +180,7 @@
             CMBEditorial.Name = "CMBEditorial";
             CMBEditorial.Size = new Size(285, 28);
             CMBEditorial.TabIndex = 10;
+            CMBEditorial.SelectedIndexChanged += CMBEditorial_SelectedIndexChanged;
             // 
             // CMBAutor
             // 
@@ -293,13 +296,14 @@
             BTNCancelar.IconChar = FontAwesome.Sharp.IconChar.None;
             BTNCancelar.IconColor = Color.Black;
             BTNCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            BTNCancelar.Location = new Point(549, 17);
+            BTNCancelar.Location = new Point(547, 17);
             BTNCancelar.Name = "BTNCancelar";
             BTNCancelar.Size = new Size(101, 40);
             BTNCancelar.TabIndex = 4;
             BTNCancelar.Text = "Cancelar";
             BTNCancelar.UseMnemonic = false;
             BTNCancelar.UseVisualStyleBackColor = false;
+            BTNCancelar.Click += BTNCancelar_Click;
             // 
             // BTNEliminar
             // 
@@ -328,6 +332,7 @@
             BTNEditar.TabIndex = 2;
             BTNEditar.Text = "Editar";
             BTNEditar.UseVisualStyleBackColor = false;
+            BTNEditar.Click += BTNEditar_Click;
             // 
             // BTNGuardar
             // 
@@ -342,6 +347,7 @@
             BTNGuardar.TabIndex = 1;
             BTNGuardar.Text = "Guardar";
             BTNGuardar.UseVisualStyleBackColor = false;
+            BTNGuardar.Click += BTNGuardar_Click;
             // 
             // BTNNuevo
             // 
@@ -356,27 +362,32 @@
             BTNNuevo.TabIndex = 0;
             BTNNuevo.Text = "Nuevo";
             BTNNuevo.UseVisualStyleBackColor = false;
+            BTNNuevo.Click += BTNNuevo_Click;
             // 
             // dgvLibros
             // 
+            dgvLibros.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLibros.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLibros.Location = new Point(28, 545);
+            dgvLibros.Location = new Point(41, 551);
             dgvLibros.Name = "dgvLibros";
+            dgvLibros.ReadOnly = true;
             dgvLibros.RowHeadersWidth = 51;
-            dgvLibros.Size = new Size(1130, 320);
+            dgvLibros.Size = new Size(1130, 269);
             dgvLibros.TabIndex = 6;
+            dgvLibros.CellContentDoubleClick += CargarLibroSeleccionado;
             // 
             // FormLibros
             // 
             AutoScaleDimensions = new SizeF(120F, 120F);
             AutoScaleMode = AutoScaleMode.Dpi;
-            ClientSize = new Size(1183, 703);
+            ClientSize = new Size(1348, 959);
             Controls.Add(dgvLibros);
             Controls.Add(panel1);
             Controls.Add(PNLDatos);
             Controls.Add(PNLBusqueda);
             Controls.Add(PNLGestor);
             Name = "FormLibros";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormLibros";
             WindowState = FormWindowState.Maximized;
             PNLBusqueda.ResumeLayout(false);
@@ -394,7 +405,7 @@
 
         private Panel PNLBusqueda;
         private Button BTNBusqueda;
-        private TextBox TXTBOXBusquedaISBN;
+        private TextBox TXTBuscarISBN;
         private Label LBLIsbn;
         private Panel PNLGestor;
         private Label LBLGestor;

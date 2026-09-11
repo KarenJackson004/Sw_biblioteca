@@ -7,7 +7,7 @@
     <Compile Update="FormDevoluciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormGeneros.cs">
+    <Compile Update="FormEditoriales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormInicio.cs">
